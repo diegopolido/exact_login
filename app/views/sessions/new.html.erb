@@ -1,0 +1,22 @@
+<div class="col-lg-4"></div>
+<div class="col-lg-4 well bs-component">
+  <h2>Login</h2>
+  <%= form_for(:session, url: login_path) do |f| %>
+  	<div class="form-group">
+    	<%= f.label :email, :class => 'control-label' %><br />
+    	<%= f.email_field :email, autofocus: true, :class => 'form-control' %>
+  	</div>
+
+  	<div class="form-group">
+    	<%= f.label :password, :class => 'control-label' %><br />
+    	<%= f.password_field :password, autocomplete: "off", :class => 'form-control' %>
+  	</div>
+
+    <div class="actions">
+      <%= f.submit "Login", class: "btn btn-primary" %>
+    </div>
+  <% end %>
+  <br/>
+  <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+</div>
+<div class="col-lg-4"></div>
