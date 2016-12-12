@@ -1,24 +1,25 @@
-# README
+# Getting started
+Install Dependencies:
+```sh
+$ bundle install
+```
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Create your database.yml (or just use the example):
+```sh
+$ cp config/database.yml.example config/database.yml
+```
 
-Things you may want to cover:
+Create your database.yml (or just use the example):
+```sh
+$ rails db:migrate
+```
 
-* Ruby version
+Run the tests with RSpec
+```sh
+$ rake spec
+```
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Run the local server and see it in your browser
+```sh
+$ rails server
+```
