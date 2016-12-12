@@ -6,4 +6,8 @@ class User < ApplicationRecord
                     uniqueness: { case_sensitive: false }
   has_secure_password
   validates :password, presence: true, length: { minimum: 8 }
+  validate :invalid_password
+  def invalid_password
+      errors.add(:password, "Password cannot be 'password'") if password == "password"
+  end 
 end
