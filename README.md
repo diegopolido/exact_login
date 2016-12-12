@@ -23,3 +23,5 @@ Run the local server and see it in your browser
 ```sh
 $ rails server
 ```
+
+See [Live Example](http://e-xact.polidosantana.com.br/) here
